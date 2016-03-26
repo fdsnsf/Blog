@@ -1,74 +1,85 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    
+    
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>fdsnsf</title>
-  </head>
-    <body>
-    <div id="container">
+    <title>魔方解法</title>
+
+<style id="system" type="text/css">
+h1,h2,h3,h4,h5,h6,p,blockquote {    margin: 0;    padding: 0;}body {    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;    font-size: 13px;    line-height: 18px;    color: #737373;    margin: 10px 13px 10px 13px;}a {    color: #0069d6;}a:hover {    color: #0050a3;    text-decoration: none;}a img {    border: none;}p {    margin-bottom: 9px;}h1,h2,h3,h4,h5,h6 {    color: #404040;    line-height: 36px;}h1 {    margin-bottom: 18px;    font-size: 30px;}h2 {    font-size: 24px;}h3 {    font-size: 18px;}h4 {    font-size: 16px;}h5 {    font-size: 14px;}h6 {    font-size: 13px;}hr {    margin: 0 0 19px;    border: 0;    border-bottom: 1px solid #ccc;}blockquote {    padding: 13px 13px 21px 15px;    margin-bottom: 18px;    font-family:georgia,serif;    font-style: italic;}blockquote:before {    content:"C";    font-size:40px;    margin-left:-10px;    font-family:georgia,serif;    color:#eee;}blockquote p {    font-size: 14px;    font-weight: 300;    line-height: 18px;    margin-bottom: 0;    font-style: italic;}code, pre {    font-family: Monaco, Andale Mono, Courier New, monospace;}code {    background-color: #fff;    color: rgba(0, 0, 0, 0.75);    padding: 1px 3px;    font-size: 12px;    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;}pre {    display: block;    padding: 14px;    margin: 0 0 18px;    line-height: 16px;    font-size: 11px;    border: 1px solid #d9d9d9;    white-space: pre-wrap;    word-wrap: break-word;}pre code {    background-color: #fff;    color:#737373;    font-size: 11px;    padding: 0;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style><style id="custom" type="text/css"></style>
+</head>
+
+
+<body marginheight="0">
+  <h1>魔方解法</h1>
+   <div id="container">
       <div class="inner">
+<section id="main_content">
+<h2>四阶魔方：</h2>
+<h3>基本规则：</h3>
+<p> 1.转化为三阶魔方。  
 
-四阶魔方：
-    基本规则：
-        1.转化为三阶魔方。
-        2.每个面的颜色是固定的，颜色不对转不出来结果。上面:黄色,下面:白色,前面:蓝色,后面:绿色,左面:橙色,右面:红色。当然上下左右都是随意找一个面为准则的，但是黄白相对，蓝绿相对，橙红相对是固定的，顺时针方向蓝红绿橙也是固定的。
-     
-    转化为三阶的基本思路:
-        1.先转最中间的4格，每个面的颜色都转对
-        2.接下来是每条棱最中间的两格,不必在乎位置对不对，只要颜色一致即可
-    转好后即变为三阶。
-三阶魔方:
-   思路：
-       从角转起，逐次扩展。
-       1.先为每一格编号。如左下图(简图-1)所示，从1的位置转起，5和11即中间的位置时对的，1，2，4，10转好与1相邻的几个棱.最上层(3,9,15)暂时不用管。转好角1后，转下面两层的棱，即  13，14以及后面的16，17右侧的22，23。留下7，8，9这条棱。经过这些转换后最上面的面，和前面右侧的棱不对，其他的都是正确的位置。如简图-2.       
+</p>
+<p> 2.每个面的颜色是固定的，颜色不对转不出来结果。上面:黄色,下面:白色,前面:蓝色,后面:绿色,左面:橙色,右面:红色。当然上下左右都是随意找一个面为准则的，但是黄白相对，蓝绿相对，橙红相对是固定的，顺时针方向蓝红绿橙也是固定的。
 
-		  21				             15  18  21                   3           21
-	18		  	                                                              
- 		 27    24                                  12  27  24                        6     24 
-15				                                                                
-	12			                         3   6   9                              9
-14		3	6	9                                 
-	11			                                 8                              8
-13		2	5	8                                
-	10			                                 7                              7
-		1	4	7                  
 
-    简图-1                                                简图-2                              简图-3
+</p>
+<h3>转化为三阶的基本思路:</h3>
+<ol>
+<li><p>先转最中间的4格，每个面的颜色都转对  </p>
+</li>
+<li><p>接下来是每条棱最中间的两格,不必在乎位置对不对，只要颜色一致即可转好后即变为三阶。  </p>
+</li>
+</ol>
+<h2>三阶魔方:</h2>
+<h5>思路：  从角转起，逐次扩展。</h5>
+<ol>
+<li><p>先为每一格编号。如左下图(简图-1)所示，从1的位置转起，5和11即中间的位置时对的，1，2，4，10转好与1相邻的几个棱.最上层(3,9,15)暂时不用管。转好角1后，转下面两层的棱，即  13，14以及后面的16，17右侧的22，23。留下7，8，9这条棱。经过这些转换后最上面的面，和前面右侧的棱不对，其他的都是正确的位置。如简图-2.</p>
+</li>
+<li><p>第二步就是从图-2转到图-3,即转对15,18,12.要转对很简单，只需要动没有转好的方格，其余转好的部分就不用动了。可以将15放在7的位置移动12,18到6或是24,来调整。  </p>
+</li>
+<li><p>转到简图-3需要明确，所有的方格都在正确的位置上是，才不需要动别的棱，只转这三个棱就能转对。 </p>
+</li>
+</ol>
+<pre><code>                                    15  18  21                   3           21  
+           21                                                                         
+     18                           12  27  24                        6     24 
+15        27   24                                                                    
+     12                          3   6   9                              9
+14        3    6    9                                 
+     11                                  8                              8
+13        2    5    8                                
+     10                                  7                              7
+          1    4    7                  
 
-      2.第二步就是从图-2转到图-3,即转对15,18,12.要转对很简单，只需要动没有转好的方格，其余转好的部分就不用动了。可以将15放在7的位置移动12,18到6或是24,来调整。
-      3.转到简图-3需要明确，所有的方格都在正确的位置上是，才不需要动别的棱，只转这三个棱就能转对。
+      简图-1                            简图-2                       简图-3</code></pre>
+<h5>下面说一下，每转一次都会改变那些方格</h5>
+<p>以图3为例：简化下数字。  
 
-下面说一下，每转一次都会改变那些方格。
+</p>
+<pre><code>               7
+            6
+ 1   2   3
 
-以图3为例：简化下数字。
+         4
 
-                 7
-              6
-   1   2   3
-    
-           4
+         5
 
-           5
-     图-4
+      图-4</code></pre>
+<p>只动这3条棱有4种转法：<br>1. 上右右转下右左转 这样1,5交换位置，3,7交换位置  2-&gt;4-&gt;6-&gt;2<br>2. 上左左传下左右转 这样5,7交换位置，1,3交换位置  2-&gt;6-&gt;4-&gt;2<br>3. 左下右下左上右上 1,7交换位置  5,3交换位置  2-&gt;4-&gt;6-&gt;2<br>4. 右下左下右上左上 1,7交换位置  5,3交换位置  2-&gt;6-&gt;4-&gt;2  
 
-只动这3条棱有4种转法：
-    a.上右右转下右左转 这样1,5交换位置，3,7交换位置  2->4->6->2
-    b.上左左传下左右转 这样5,7交换位置，1,3交换位置  2->6->4->2
-    c.左下右下左上右上 1,7交换位置  5,3交换位置  2->4->6->2
-    d.右下左下右上左上 1,7交换位置  5,3交换位置  2->6->4->2
+</p>
+<p>可以看出连续转某种转法2次角可以回到最初位置，连续3次棱中间的位置可以回到最初的位置，连续6次位置就没有变化。</p>
 
-可以看出连续转某种转法2次角可以回到最初位置，连续3次棱中间的位置可以回到最初的位置，连续6次位置就没有变化。
-
-        <footer>
-          <img src="images/octocat-icon.png"/>maintained by <a href="https://github.com/fdsnsf">fdsnsf</a><br>
+   </section> 
+ <footer>
+          <img src="../images/octocat-icon.png"/>maintained by <a href="https://github.com/fdsnsf">fdsnsf</a><br>
         </footer>
 
         
